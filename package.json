@@ -1,0 +1,40 @@
+{
+	"name": "helloworld-minimal-sample",
+	"description": "Minimal HelloWorld example for VS Code",
+	"version": "0.0.1",
+	"publisher": "vscode-samples",
+	"repository": "https://github.com/Microsoft/vscode-extension-samples/helloworld-minimal-sample",
+	"engines": {
+		"vscode": "^1.56.0"
+	},
+	"activationEvents": [
+		"*"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "COMMAND: Hello World"
+			}
+		],
+		"menus": {
+            "explorer/context": [
+                {
+                    "command": "extension.helloWorld",					
+					"when": "resourceFilename in ext:supportedFolders"
+                }
+            ],
+			"editor/context": [
+                {
+                    "command": "extension.helloWorld",					
+					"when": "resourceFilename in ext:supportedFolders"
+                }
+            ]
+		}
+	},
+	"scripts": {},
+	"devDependencies": {
+		"@types/vscode": "^1.56.0"
+	}
+}
