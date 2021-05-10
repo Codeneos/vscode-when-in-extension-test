@@ -19,18 +19,18 @@
 			}
 		],
 		"menus": {
-            "explorer/context": [
-                {
-                    "command": "extension.helloWorld",					
+			"explorer/context": [
+				{
+					"command": "extension.helloWorld",
 					"when": "resourceFilename in ext:supportedFolders"
-                }
-            ],
+				}
+			],
 			"editor/context": [
-                {
-                    "command": "extension.helloWorld",					
+				{
+					"command": "extension.helloWorld",
 					"when": "resourceFilename in ext:supportedFolders"
-                }
-            ]
+				}
+			]
 		}
 	},
 	"scripts": {},
